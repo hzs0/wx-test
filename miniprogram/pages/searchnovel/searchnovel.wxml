@@ -1,0 +1,14 @@
+<!--pages/searchnovel/searchnovel.wxml-->
+  <block wx:for="{{novel}}">
+    <view class='more-novel'>
+      <view class='more-cover'><image src='{{item.cover}}'></image></view>
+      <view class='more-intr'>
+        <view class='more-name'>{{item.title}}</view>
+        <view class='more-author'><span>{{item.author}}</span><span>{{item.category}}</span></view>
+        <view class='more-desc'>{{item.desc}}</view>
+        <view class='more-chapter'>{{item.first_chapter}}</view>
+      </view>
+    </view>
+  </block>
+
+

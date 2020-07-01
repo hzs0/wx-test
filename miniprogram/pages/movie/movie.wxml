@@ -1,0 +1,55 @@
+<!--pages/movie/movie.wxml-->
+<view class='detail-top'>
+  <view class='movie-cover'><image src='{{detail.images.large}}'></image></view>
+  <view class='movie-intr'>
+      <view class='movie-name'>{{detail.title}}</view>
+      <view class='original-title'>{{detail.original_title}}</view>
+      <view class='average'><span>豆瓣评分：</span><span style="font-size:14px;color:red;">{{detail.rating.average}}</span></view>
+      <view class='movie-genres'><span>{{detail.genres}}</span></view>
+      <view class='movie-dur'>{{detail.countries[0]}}/{{detail.durations}}</view>
+      <view class='movie-pubdate'>{{detail.pubdates[1]}}上映</view>
+  </view>
+</view>
+<view class='movie-desc'><span>{{detail.summary}}</span></view>
+<swiper style='min-height:200px;' display-multiple-items="4" style='border-bottom:10px solid #ccc;'>
+  <h1 style="margin:15px 0 10px 10px; font-size:14px;">演职人员</h1>
+  <block wx:for="{{casts}}">
+    <swiper-item style='background:white;height:150px;'>
+      <view class='movie-avatars' >
+        
+        <image src='{{item.avatars.large}}'></image>
+        <span style="font-size:10px;margin-left:15px; display: block;">{{item.name}}</span>
+      </view>
+    </swiper-item>
+  </block>
+    
+</swiper>
+<view style='border-bottom:10px solid #ccc;'>
+  <h1 style="margin:15px 0 10px 10px; font-size:14px;font-weight: 600;">剧照</h1>
+  <scroll-view style='width:100%;white-space: nowrap;height:100px;margin-bottom:10px;' scroll-x="true">
+     <block wx:for="{{photos}}">
+        <image style='width: 125px;height:115px;display: inline-block;margin-left:10px;'  src='{{item.cover}}'></image>
+     </block>
+  </scroll-view>
+</view>
+<view class="remark-ul">
+  <h1 style="margin:15px 0 10px 10px; font-size:14px;font-weight: 600;">精选</h1>
+  <view class="remark-li" wx:for="{{comments}}"> 
+    <view class="news-user" >
+      <image class='user-avatar' src='{{item.author.avatar}}'></image>
+      <span class="user-name">{{item.author.name}}</span><span style="float:right;margin-top:-20px;font-size:12px;margin-right:10px;">{{item.created_at}}</span>
+    </view>
+    <view class="remark-cont"> {{item.content}}</view>
+  </view>
+</view>
+<view class="remark-ul">
+  <h1 style="margin:15px 0 10px 10px; font-size:14px;font-weight: 600;">评论</h1>
+  <view class="remark-li" wx:for="{{reviews}}"> 
+    <view class="news-user" >
+      <image class='user-avatar' src='{{item.author.avatar}}'></image>
+      <span class="user-name">{{item.author.name}}</span><span style="float:right;margin-top:-20px;font-size:12px;margin-right:10px;">{{item.created_at}}</span>
+    </view>
+    <view class="remark-cont"> {{item.summary}}</view>
+  </view>
+</view>
+

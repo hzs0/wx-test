@@ -1,0 +1,50 @@
+/* pages/search/search.wxss */
+.search{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+}
+.searchItem{
+	display: flex;
+	flex-direction: row;
+	background: #f0f0f3;
+	width: 80%;
+	border-radius: 10px;
+	margin-left: 10px;
+}
+.searchItem image{
+	height: 12px;
+	width: 12px;
+	align-self: center;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.searchItem input{
+	width: 60%px;
+	flex: 1;
+	font-size: 12px;
+}
+.allSearch{
+	margin-top: 20px;
+}
+.hotSearch{
+	font-size: 16px;
+	margin-left: 10px;
+}
+.label{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.label view{
+	font-size: 13px;
+	background-color: rgba(204, 204, 204, 0.507);
+	text-align: center;
+	margin-left: 10px;
+	margin-top: 10px;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}

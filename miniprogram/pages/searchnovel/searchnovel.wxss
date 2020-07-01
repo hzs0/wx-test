@@ -1,0 +1,49 @@
+/* pages/searchnovel/searchnovel.wxss */
+.more-novel{
+  width: 100%;
+  height: 150px;
+  background: white;
+  border-bottom: 1px solid #ccc;
+}
+.more-cover{
+  width: 120px;
+  height: 150px;
+  float: left;
+}
+.more-cover image{
+  width: 95px;
+  height: 130px;
+  margin: 18px 0 0 20px;
+}
+.more-intr{
+  width: 60%;
+  height: 150px;
+  float: left;
+}
+.more-name{
+  color: black;
+  margin: 20px 0 0 10px;
+  font-size: 17px;
+}
+.more-author span{
+  /* display: flex; */
+  font-size: 12px;
+  color: black;
+  margin:15px 0 0 10px;
+}
+.more-desc{
+  width: 100%;
+  height: 30px;
+  margin:20px 0 0 10px;
+  font-size: 14px;
+  color: black;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.more-chapter{
+  font-size: 12px;
+  float: right;
+  padding-right: 15px;
+  color: rgb(145, 145, 145);
+}

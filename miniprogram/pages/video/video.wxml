@@ -1,0 +1,19 @@
+<!--pages/video/video.wxml-->
+<view class='body'>
+  <view class='slogan'>
+    <view>{{video.data.content.data.slogan}}</view>
+  </view>
+  <view class='content'>
+    <video class='video' src='{{video.data.content.data.playUrl}}'></video>
+  </view>
+  <view class='title'>
+    <view>{{video.data.content.data.title}}</view>  
+  </view>
+  <view class='description'>
+    <view>{{video.data.content.data.description}} </view>
+  </view>     
+</view>
+
+
+
+

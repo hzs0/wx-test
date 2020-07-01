@@ -1,0 +1,44 @@
+/* pages/person/person.wxss */
+.accountMg{
+	height: 75px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.headPt{
+	width: 40px;
+	height: 40px;
+	margin-left: 10px;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.account{
+	width: 70%;
+	margin-left: 10px;
+}
+.symbol{
+	color: #000000;
+}
+.row{
+	display: flex;
+	flex-direction: row;
+	height: 50px;
+	align-items: center;
+	border-bottom: 1px solid #9b9a9a;
+}
+.icon{
+	width: 50px;
+	text-align: center;
+	margin-top: 3px;
+}
+.rowName{
+	width: 73%;
+	font-size: 14px;
+	font-weight: bold;
+}
+.right{
+	text-align: right;
+}
+.marginTop{
+	margin-top: 50px;
+}

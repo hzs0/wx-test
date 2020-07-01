@@ -1,0 +1,86 @@
+<!--pages/movie/movie.wxml-->
+<view class='tab'>
+  <view class="city-entry">
+      <span class="city-name">广州</span><i class="city-entry-arrow"></i>
+  </view>
+  
+
+  <view class='search' bindtap='search'><image src='../../images/search.png'></image></view>
+</view>
+<view class='nav'>
+  <view id='0' class="{{currentTab == 0?'select':'normal'}}" bindtap='changeTab'>小说</view>
+  <view id='1' class="{{currentTab == 1?'select':'normal'}}" bindtap='changeTab'>电影</view>
+  <view id='2' class="{{currentTab == 2?'select':'normal'}}" bindtap='changeTab'>段子</view>
+  <view id='3' class="{{currentTab == 3?'select':'normal'}}" bindtap='changeTab'>视频</view>
+</view>
+<swiper current="{{currentTab}}" class='item-box'>
+  <swiper-item>
+    <block wx:for="{{novel}}" wx:key='unique'>
+     <view class='list' bindtap='loadnovel' data-name='{{item.bookname}}'>
+       <view><image  mode='aspectFit' class='novel-img' src='{{item.book_cover}}'></image></view>
+       <view class='bookname'>{{item.bookname}}</view>
+       <view class='book-author'><image  class='author-img' src='../../images/author.jpg'></image><span class="author-name">{{item.author_name}}</span></view>
+       
+       <!-- <view>{{item.introduction}}</view> -->
+     </view>
+    </block>
+  </swiper-item>
+  <swiper-item>
+     <image mode='widthFix' style='width:100%;' src='../../images/1.png'></image>
+     <view class='movie-box' wx:for="{{movie}}" bindtap='loadmovie' data-id='{{item.id}}'>
+        <view class='movie'>
+            <view class='movie-cover'><image src='{{item.images.large}}'></image></view>
+            <view class='movie-intr'>
+                <view class='movie-name'>{{item.title}}</view>
+                <view class='movie-author'><span>豆瓣评分：</span><span style="font-size:14px;color:red;">{{item.rating.average}}</span></view>
+                <view class='movie-desc'>{{item.casts.name}}</view>
+                <view class='movie-chapter'>{{item.genres}}</view>
+            </view>
+        </view>
+     </view>
+  </swiper-item>
+  <swiper-item>
+    <view class='piece-title' style='background:white;'>
+      <button class='pre' bindtap='pre' >上一条</button>
+      <button class='next' bindtap='next'>下一条</button>
+    </view>
+    <swiper  style='height:300px;' current='{{current}}' bindchange='swiperChange' >
+      <block wx:for="{{piece}}">
+         <swiper-item style='background:white;'>
+            <view class='piece-author'>
+              <image src='{{item.profile_image}}'></image>
+              <span>{{item.name}}</span>
+            </view>
+            <view class='create-time'>{{item.created_at}}</view>
+            <view class='piece-content'>{{item.text}}</view>
+            
+         </swiper-item>
+     </block>
+     
+    </swiper>
+     <view wx:for="{{gif}}" style="background:white;margin-top:15px;">
+      <!-- <block  >  -->
+            <view class='piece-author'>
+              <image src='{{item.header}}'></image>
+              <span>{{item.username}}</span>
+            </view>
+            <view class='create-time'>{{item.passtime}}</view>
+            <view class='piece-content' style='float:left;'>{{item.text}}</view>
+            <view class='piece-gif'><image lazy-load="true" mode='aspectFit' style='height:300px' src='{{item.image}}'></image></view>
+     <!-- </block> -->
+    </view> 
+  </swiper-item>
+  <swiper-item>
+    <block wx:for="{{video}}" wx:key='unique'>
+     <view class='cover-box' bindtap='loadList' data-idx='{{index}}'>
+       <view class='video-cover'>
+        <image mode='aspectFit' src='{{item.data.content.data.cover.feed}}../../images/nopic.jpg'></image>
+       </view> 
+       <view class='video-title'>{{item.data.content.data.title}}</view>
+       <view class='video-author'><image src='{{item.data.header.icon}}'></image><span class="video-author">{{item.data.header.description}}</span></view>
+     </view>
+       <!-- <view>{{item.username}}</view>
+       <view><image src='{{item.header}}'></image></view> -->
+     </block>
+  </swiper-item>
+</swiper>

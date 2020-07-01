@@ -1,0 +1,17 @@
+<!--pages/search/search.wxml-->
+<view class="search">
+	<view class="searchItem">
+		<image src="../../images/ss.png"></image>
+		<input placeholder="请输入搜索内容" focus="true" name="search" bindinput="getInput" value="{{searchInput}}"></input>
+		<image src="../../images/qk.png" bindtap="empty"></image>
+	</view>
+	<view bindtap="searchMenu" style="font-size:15px;margin-left:10px;margin-bottom:2px;">搜索</view>
+</view>
+<view class="allSearch">
+	<view class="hotSearch">热门搜索</view>
+	<view class="label">
+		<block wx:for="{{hotSearch}}">
+			<view bindtap="searchHot" data-name="{{item.name}}">{{item.name}}</view>
+		</block>
+	</view>
+</view>

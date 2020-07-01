@@ -1,0 +1,112 @@
+/* pages/movie/movie.wxss */
+.detail-top{
+  width: 100%;
+  height: 175px;
+  background: rgba(57, 59, 72, 0.753)
+}
+.movie-cover{
+  width: 120px;
+  height: 150px;
+  float: left;
+}
+.movie-cover image{
+  width: 110px;
+  height: 150px;
+  margin: 18px 0 0 20px;
+  
+}
+.movie-intr{
+  height: 150px;
+  float: left;
+}
+.movie-name{
+  color: white;
+  margin: 20px 0 0 20px;
+  font-size: 17px;
+}
+.original-title{
+  color: white;
+  margin-left: 20px;
+  font-size: 11px;
+}
+.average {
+  /* display: flex; */
+  font-size: 12px;
+  color: #ccc;
+  margin:15px 0 0 20px;
+}
+.movie-genres{
+  font-size: 12px;
+  color: #ccc;
+  margin:15px 0 0 20px;
+}
+.movie-dur{
+  font-size: 12px;
+  color: #ccc;
+  margin-left: 20px;
+}
+.movie-pubdate{
+  font-size: 12px;
+  color: #ccc;
+  margin-left: 20px;
+}
+.movie-desc{
+  font-size: 14px;
+  padding: 17px 15px 3px;
+  line-height: 23px;
+  border-bottom: 1px solid #ccc;
+}
+.movie-avatars image{
+   width: 70px;
+   height: 90px;
+   margin-left: 10px;
+}
+.comments-avatar{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 10px 0 0 10px; 
+}
+.news-user{
+    width: 100%;
+    height: 30px;
+    /* border: 1px solid black; */
+    position: relative;
+    
+}
+.news-user .user-avatar{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;  
+    margin-top: 10px;
+}
+.news-user .user-name{
+    margin: -22px 6px 0 25px;
+    color: black; 
+    font-size: 13px;  
+    display: block;
+    font-weight: 600;
+    width: 30%;
+}
+.remark-ul{
+    width: 100%;
+    height: auto;
+    padding-right: 10px;
+}
+.remark-li{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgb(218, 215, 215);
+    min-height: 100px;
+    padding-left: 10px;
+    padding-right: 20px;
+}
+.remark-cont{
+
+    min-height: 25px;
+    height: auto;
+    padding-left: 25px;
+    font-size: 14px;
+    padding: 17px 15px 3px;
+    line-height: 23px;
+}
